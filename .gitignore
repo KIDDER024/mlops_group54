@@ -187,3 +187,7 @@ data/processed/
 
 # Hydra: should not be comitted
 .hydra/
+
+# Dont commit trained model
+models/*
+!models/.gitkeep

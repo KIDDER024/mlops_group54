@@ -1,2 +1,7 @@
-epochs: 1
-lr: 0.001
+lr: 0.0003
+batch_size: 16
+epochs: 10
+weight_decay: 0.0001
+
+output_dir: models
+checkpoint_name: model.pth
