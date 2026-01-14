@@ -65,23 +65,25 @@ a [cookiecutter template](https://github.com/cookiecutter/cookiecutter) for gett
 started with Machine Learning Operations (MLOps).
 
 # Status:
+- I have added wandb, which will be used for logging, when we have a training code 
 
-# Issues:
-Downloading data:
--	With every git pull, we download data – heavy an not optimal, solvable by:
--	git rm -r --cached data/raw
--	git commit -m "Stop tracking raw dataset (keep local only)"
--	git push
-- We shoul all jsut have the data locally in folders
-- I have added raw data to gitignore, so when we push it will not be pushed, but since its already in github, I think we need to remove it from there. This can eb done with the above solution. 
 
-Two data processing pipelines:
-- one using data.py, config files and hydra
-- one using kaggle and "mnist style" - however, files are in .jpg format and mnist style does not support this.
+# To do
 
-# Pipeline:
-- Fill out model.py with some neural network backbone, maybe resnet-50?
-- Fill out train.py
-- Fill out evaluate.py
-- Create docker files
+Forslag til, hvad vi mangler, og hvem der kigger på det:
+
+- requirements.txt (Fiona)
+- evaluate.py (Fiona)
+- typing some explanation for code (Phi og Lucas)
+- docker file for training (for local use only) (Phi og Lucas)
+- logging (Phi og Lucas)
+- W&B reporting (Fiona)
+- Unit test linting (Rico) (Fiona)
+- Unit test data (Phi og Lucas)
+- Unit test model (Fiona)
+- Calculate code covrage (Ingeborg)
+- Create a data storage in GCP bucket and link with dvc setup (no data in git, only data in GCP) (Ingeborg)
+- Get model training in GCP using Run (Ingeborg)
+- Create FastAPI (Phi og Lucas)
+- (API testing) (Phi og Lucas)
 
